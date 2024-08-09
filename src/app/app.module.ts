@@ -4,20 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { Section1Component } from './components/section1/section1.component';
-import { Section2Component } from './components/section2/section2.component';
+import {RegisterComponent} from "./components/register/register.component";
+import {ListComponent} from "./components/list/list.component";
 
 import {MatFormFieldModule } from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
+import {FormsModule} from "@angular/forms";
+import { UsersService } from './services/users.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    Section1Component,
-    Section2Component
+    RegisterComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -26,11 +28,10 @@ import {MatListModule} from '@angular/material/list';
     MatButtonModule,
     MatInputModule,
     MatListModule,
+    FormsModule,
   ],
-  exports: [
-    Section1Component
-  ],
-  providers: [],
+
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
