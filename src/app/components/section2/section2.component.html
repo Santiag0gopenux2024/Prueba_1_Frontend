@@ -1,1 +1,20 @@
-<p>section2 works!</p>
+<div class="container">
+  <h1>Sección 2</h1>
+  <mat-form-field class="form" appearance="legacy">
+    <mat-label>Nombre:</mat-label>
+    <input matInput placeholder="Ingresa tu nombre:" #newName>
+    <mat-hint>Nombre completo</mat-hint>
+  </mat-form-field>
+  <mat-form-field class="form" appearance="legacy">
+    <mat-label>Edad:</mat-label>
+    <input matInput placeholder="Ingresa tu edad:" #newAge>
+    <mat-hint>Ingresa tu edad</mat-hint>
+  </mat-form-field>
+  <mat-form-field class="form" appearance="legacy">
+    <mat-label>Descripción:</mat-label>
+    <input matInput placeholder="Ingresa tu descripción:" #newDescription>
+    <mat-hint>Ingresa una descripción</mat-hint>
+  </mat-form-field>
+  <button (click)="onAddNewName(newName.value)" (click)="onAddNewAge(newAge.value)"(click)="onAddNewDescription(newDescription.value)"
+          mat-raised-button color="warn">Agregar usuario</button>
+</div>

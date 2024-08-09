@@ -1,1 +1,19 @@
-<p>section1 works!</p>
+<div class="container">
+  <app-section2
+    (newNameEvent)="onNewNameReceived($event)"
+    (newAgeEvent)="onNewAgeReceived($event)"
+    (newDescriptionEvent)="onNewDescriptionReceived($event)"></app-section2>
+  <h1>Sección 1</h1>
+  <mat-list>
+    <div class="container">
+      <mat-list-item> Nombre </mat-list-item>
+      <mat-list-item> Edad </mat-list-item>
+      <mat-list-item> Descripción </mat-list-item>
+    </div>
+    <div *ngFor="let user of users" class="container">
+      <mat-list-item> {{ user.name }} {{ receivedName }}</mat-list-item>
+      <mat-list-item> {{ user.age }} {{ receivedAge }} </mat-list-item>
+      <mat-list-item> {{ user.description }} {{ receivedDescription }} </mat-list-item>
+    </div>
+  </mat-list>
+</div>

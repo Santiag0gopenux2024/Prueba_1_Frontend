@@ -1,0 +1,12 @@
+h1{
+  text-align: center;
+  font-family: "Abyssinica SIL";
+  font-size: 30px;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  font-size: 15px;
+}
+
+
