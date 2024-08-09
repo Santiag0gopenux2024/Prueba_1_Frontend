@@ -1,9 +1,5 @@
+<h1>Sección 1</h1>
 <div class="container">
-  <app-section2
-    (newNameEvent)="onNewNameReceived($event)"
-    (newAgeEvent)="onNewAgeReceived($event)"
-    (newDescriptionEvent)="onNewDescriptionReceived($event)"></app-section2>
-  <h1>Sección 1</h1>
   <mat-list>
     <div class="container">
       <mat-list-item> Nombre </mat-list-item>
@@ -16,4 +12,8 @@
       <mat-list-item> {{ user.description }} {{ receivedDescription }} </mat-list-item>
     </div>
   </mat-list>
+  <app-section2
+    (newNameEvent)="onNewNameReceived($event)"
+    (newAgeEvent)="onNewAgeReceived($event)"
+    (newDescriptionEvent)="onNewDescriptionReceived($event)"></app-section2>
 </div>
