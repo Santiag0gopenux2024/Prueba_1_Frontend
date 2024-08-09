@@ -7,12 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {RegisterComponent} from "./components/register/register.component";
 import {ListComponent} from "./components/list/list.component";
 
-import {MatFormFieldModule } from '@angular/material/form-field';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatListModule} from '@angular/material/list';
-import {FormsModule} from "@angular/forms";
 import { UsersService } from './services/users.service';
+import {MaterialModule} from "./material/material.module";
 
 
 @NgModule({
@@ -24,11 +20,7 @@ import { UsersService } from './services/users.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatInputModule,
-    MatListModule,
-    FormsModule,
+    MaterialModule
   ],
 
   providers: [UsersService],
